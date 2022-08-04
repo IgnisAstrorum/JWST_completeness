@@ -1,9 +1,7 @@
 #!/home/jwst/miniconda3/bin/python
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jun 15 15:55:34 2022
-
-@author: ignas
+Code to add sources from a stamp cataloog into a science image
 """
 
 import numpy as np
