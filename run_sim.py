@@ -1,9 +1,7 @@
-#!/home/jwst/miniconda3/bin/python
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 """
-Created on Thu Aug  4 11:32:22 2022
-
-@author: ignas
+Runs the full completenes simulation
 """
 
 import os
