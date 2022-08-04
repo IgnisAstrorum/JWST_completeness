@@ -1,4 +1,4 @@
-#!/home/jwst/miniconda3/bin/python
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 """
 Created on Wed Jun 29 10:36:17 2022
