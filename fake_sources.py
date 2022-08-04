@@ -1,4 +1,4 @@
-#!/home/jwst/miniconda3/bin/python
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 """
 Code to add sources from a stamp cataloog into a science image
