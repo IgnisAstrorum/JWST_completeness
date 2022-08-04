@@ -1,9 +1,7 @@
 #!/home/jwst/miniconda3/bin/python
 # -*- coding: utf-8 -*-
 """
-Created on Tue Jul 26 13:36:29 2022
-
-@author: ignas
+Plots the obtained completeness curves
 """
 import numpy as np
 from astropy.table import Table
