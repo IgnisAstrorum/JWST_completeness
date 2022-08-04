@@ -12,14 +12,18 @@ This program computes a completeness curve for sources at a particular redshift 
 into a specified science image at different absolute magnitude intervals. It then runs sextractor and checks the number of sources recovered
 vs the number of sources inserted.
 
-### The general procedure is as follows:
+### Simple usage:
+- Generate a catalog of stamps using GAL_Raw_V3.py.
+- Run the run_sim.py file
+
+### Alternatively, the program may be executed stepwise as follows:
 - Generate a catalog of stamps using GAL_Raw_V3.py.
 - Run sextractor on the desired science image producing a segmentation file.
 - Feed the science image and the segmentation file into Generate_mask.py.
 - Run FakeSources.py which inserts sources from the stamp catalog into the science image.
-- Use call_sex.py to run sextractor on the files with inserted sources
-- Run match_tables_data.py to match the sextractor catalog with the inserted catalog
-- Run plot_completeness.py to plot the completeness function and save it to a machine readable file
+- Use call_sex.py to run sextractor on the files with inserted sources.
+- Run match_tables_data.py to match the sextractor catalog with the inserted catalog.
+- Run plot_completeness.py to plot the completeness function and save it to a machine readable file.
 
 The final results, contained in a folder specified in the config file are fits tables containing the full 
 inserted catalog, the catalog of detected sources and the catalog of undetected sources
