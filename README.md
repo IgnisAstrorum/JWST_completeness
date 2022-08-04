@@ -19,8 +19,8 @@ vs the number of sources inserted.
 ### Alternatively, the program may be executed stepwise as follows:
 - Generate a catalog of stamps using GAL_Raw_V3.py.
 - Run sextractor on the desired science image producing a segmentation file.
-- Feed the science image and the segmentation file into Generate_mask.py.
-- Run FakeSources.py which inserts sources from the stamp catalog into the science image.
+- Feed the science image and the segmentation file into generate_mask.py.
+- Run fake_sources.py which inserts sources from the stamp catalog into the science image.
 - Use call_sex.py to run sextractor on the files with inserted sources.
 - Run match_tables_data.py to match the sextractor catalog with the inserted catalog.
 - Run plot_completeness.py to plot the completeness function and save it to a machine readable file.
