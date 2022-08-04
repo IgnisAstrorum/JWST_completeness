@@ -1,0 +1,51 @@
+Config. info, what follows after = are the default values:
+
+[physical parameters] - parameters of the inserted sources
+zero_point = 28.08 -zero point magnitude for sextractor and flux insertion
+mag_min = -19 -faintest sources to be inserted
+mag_max = -24 -brightest sources to be inserted
+bin_width = 0.2 -width of each magnitude sub-interval
+use_lf = 0 -set to 1 if Schechter LF distribution desired
+stamp_size = 101 -size of the inserted stamps
+redshift = 10.5 -redshift of the inserted sources
+galaxy_sizes = 0.6, 0.8, 1.0 -sizes of the inserted sources
+n_inserts = 1000 -# of sources to insert for each sub-interval
+r_ref = 0.8 -reference size for the size-lum relation
+m_ref = -21 -reference magnitude for the size-lum relation
+
+[LF parameters] -parameters of the Schechter LF
+mag_char = -21.19 -characteristic magnitude
+scale = 0.0000194 -scaling constant
+slope = -2.28
+
+[cosmology] -cosmological parameters, FlatLambdaCDM assumed
+omega_m = 0.3
+h0 = 70
+
+[files] - file information for the source insertion
+mask_file = smacs_mask.fits -mask file location
+psf_file = psf_ceersd_03_200.fits -psf file location
+image_file = smacs_f200w_i2d_1overf.fits -image file location
+stamp_dir = /share/imageanalysis/GalaxyTemplates/Gal_Raw/ -directory hosting the stamp catalog
+outroot = /share/imageanalysis/comp_sim/inserted_img/smacs_ -output file template (include directory)
+stamp_params = series2_z85_params.txt -name of the file listing all stamp parameters
+stamp_fileroot = series2_z85_ -stamp file name template
+
+[catalog matching]
+error = 6 -maximum separation in pixels for the sources to be considered matched
+out_dir = /share/imageanalysis/comp_sim/results/ -directory to output the final results
+comp_bins = 24 -number of bins to use when calculating completeness
+
+[sextractor parameters] -parameters for sextractor
+zero_point = 28.08
+out_dir = /share/imageanalysis/comp_sim/sex_output/ -sextractor output directory
+seg_fileroot = smacs_seg_ -segmentation file template
+cat_fileroot = smacs_cat_ -catalog file template
+config_file = CEERS_Test.sex -sextractor config file
+
+[mask parameters] -parameters for mask generation
+seg_file = smacs_seg_200w.fits -initial segmentation file
+img_file = smacs_f200w_i2d_1overf.fits -science image file
+stamp_size = 101
+buffer = 0 -buffer to be mask around pre-detected object
+out_file = smacs_mask.fits -file to output the mask to
