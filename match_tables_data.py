@@ -1,9 +1,7 @@
-#!/home/jwst/miniconda3/bin/python
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jun 29 11:34:25 2022
-
-@author: ignas
+Matches SExtractor catalogs to inserted catalogs
 """
 
 import numpy as np
