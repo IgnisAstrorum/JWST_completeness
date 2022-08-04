@@ -1,5 +1,5 @@
 # JWST_completeness
-#Dependencies:
+## Dependencies:
 Tested with Phyton 3.9
 - astropy 5.1
 - numpy 1.22
@@ -7,14 +7,14 @@ Tested with Phyton 3.9
 - scipy 1.8.1
 - sextractor 2.25.3 installed on the host system
 
-#General description:
+## General description:
 This program computes a completeness curve for sources at a particular redshift by inserting sources from a pre-generated catalog
 into a specified science image at different absolute magnitude intervals. It then runs sextractor and checks the number of sources recovered
 vs the number of sources inserted.
 
-The general procedure is as follows:
-- generate a catalog of stamps using GAL_Raw_V3.py.
-- run sextractor on the desired science image producing a segmentation file.
+### The general procedure is as follows:
+- Generate a catalog of stamps using GAL_Raw_V3.py.
+- Run sextractor on the desired science image producing a segmentation file.
 - Feed the science image and the segmentation file into Generate_mask.py.
 - Run FakeSources.py which inserts sources from the stamp catalog into the science image.
 - Use call_sex.py to run sextractor on the files with inserted sources
@@ -31,5 +31,5 @@ for the ease of checking the results.
 Configuring the program can be done entirely from the configuration file source_insertion.config,
 for more information on that refer to the config_info.txt
 
-#Notes/Bugs:
-- the mask generation code uses a large amount of ram (up to 11 GB in my case)
+## Notes/Bugs:
+- The mask generation code uses a large amount of ram (up to 11 GB in my case)
