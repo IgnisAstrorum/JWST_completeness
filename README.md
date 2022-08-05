@@ -13,7 +13,7 @@ into a specified science image at different absolute magnitude intervals. It the
 vs the number of sources inserted.
 
 ### Simple usage:
-- Generate a catalog of stamps using GAL_Raw_V3.py.
+- Generate a catalog of stamps using GAL_Raw_V3.py or use the one provided in the source_catalog directory.
 - Run the run_sim.py file
 
 ### Alternatively, the program may be executed stepwise as follows:
