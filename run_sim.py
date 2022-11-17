@@ -30,7 +30,7 @@ callstring = conf_str+cat_string+check_string
 os.system(callstring)
 
 print("generating mask")
-os.system("./Generate_mask.py")
+os.system("./generate_mask.py")
 print("Inserting sources")
 os.system("./fake_sources.py")
 print("Matching SExtractor tables")
