@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/nvme/scratch/software/anaconda3/envs/jwst/bin/python
 # -*- coding: utf-8 -*-
 """
 Plots the obtained completeness curves
@@ -13,11 +13,13 @@ config.read('source_insertion.config')
 conf_par = dict(config.items('catalog matching'))
 out_dir = conf_par['out_dir']
 comp_bins = int(conf_par['comp_bins'])
+phys_par = dict(config.items('physical parameters'))
+z = float(phys_par['redshift'])
 
 comp_file = out_dir + "recovered_sources.fits"
 cat_file = out_dir + "full_catalog.fits"
-plot_file = out_dir + "completeness_plot.png"
-func_file = out_dir + "completeness_func.txt"
+plot_file = out_dir + "completeness_plot_z{}.png".format(int(z*10))
+func_file = out_dir + "completeness_func_z{}.txt".format(int(z*10))
 
 completeness_sources = Table.read(comp_file)
 cat_sources = Table.read(cat_file)
@@ -45,8 +47,6 @@ with open(func_file, 'w') as file:
     for i in range(0, len(comp_hist)):
         string = "{},{}".format(bin_cen[i], comp_hist[i]) + "\n"
         file.write(string)
-
-
 
 
 

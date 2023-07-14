@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/nvme/scratch/software/anaconda3/envs/jwst/bin/python
 # -*- coding: utf-8 -*-
 """
 Created on Fri Jul 15 12:19:49 2022
@@ -29,7 +29,7 @@ def load_config():
     
 def main():
     #Load configuration parameters
-    segmentation_file, image, stamp_siz, object_buffer, output_filename = load_config()
+    generate_mask, segmentation_file, image, stamp_siz, object_buffer, output_filename = load_config()
     par_dict = load_config()
     segmentation_file = par_dict['seg_file']
     image = par_dict['img_file']

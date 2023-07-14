@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/nvme/scratch/software/anaconda3/envs/jwst/bin/python
 # -*- coding: utf-8 -*-
 """
 Code to add sources from a stamp cataloog into a science image
@@ -232,6 +232,9 @@ def insert_sources(mag_max, mag_min, phys_params, lf_params,
     #Set PSF as convolution kernel
     psf_file = fits.open(psf_file)
     kernel = psf_file[0].data
+    #Trim kernel down to stamp size
+    center = kernel.shape[0]//2
+    kernel = kernel[center-stamp_size//2:center+stamp_size//2+1, center-stamp_size//2:center+stamp_size//2+1]
     psf_file.close()
 
 
