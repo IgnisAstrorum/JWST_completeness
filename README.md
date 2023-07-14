@@ -32,7 +32,7 @@ vs the number of sources inserted.
 
 The final results, contained in a folder specified in the config file are fits tables containing the full 
 inserted catalog, the catalog of detected sources and the catalog of undetected sources
-along with a plot of completeness vs apparent magnitude and the completeness data saved into a text file.
+along with a plot of completeness vs apparent magnitude and the completeness data saved into a text file. A simple script to plot a 2D completeness - absolute magnitude - redshift relation is provided by the 2d_comp_z.py file.
 
 Intermediate fits images with inserted sources and sextractor files are saved in separate directories (specified in the config)
 for the ease of checking the results.
