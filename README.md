@@ -14,8 +14,12 @@ vs the number of sources inserted.
 
 ### Simple usage:
 - Generate a catalog of stamps using GAL_Raw_V3.py or use the one provided in the source_catalog directory.
-- Ensure that all .py files are granted executable status.
+- Ensure that all .py files are granted executable status, you may need to change the shebang line.
+- Ensure that the science image is index 1 and the weight image - index 2 in the .fits stack for the field.
+- Edit the config finle as desired.
+- Run generate_mask.py to generate a mask for your desired field.
 - Run the run_sim.py file.
+- If a redshift range is desired, run loop_redshift.py instead.
 
 ### Alternatively, the program may be executed stepwise as follows:
 - Generate a catalog of stamps using GAL_Raw_V3.py.
@@ -37,4 +41,7 @@ Configuring the program can be done entirely from the configuration file source_
 for more information on that refer to the config_info.txt
 
 ## Notes/Bugs:
-- The mask generation code uses a large amount of ram (up to 11 GB in my case)
+- The mask generation code uses a large amount of ram (up to 11 GB in my case).
+- The looping over a redshift range is somewhat grafted on at the moment, the next update will incorporate this into the main config file.
+- Plotting of the 2D completeness is similarly not well integrated.
+- Indices of the fits stack are currently hardcoded - should be made more flexible in the near future.
