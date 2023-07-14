@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/nvme/scratch/software/anaconda3/envs/jwst/bin/python
 # -*- coding: utf-8 -*-
 """
 Matches SExtractor catalogs to inserted catalogs
@@ -86,7 +86,7 @@ for i in range(1, len(ins_und)):
 
 final_und_table.write(und_tablename, format='fits', overwrite=True)
 
-
+print(len(comp_tables))
 final_comp_table = comp_tables[0]
 comp_co = SkyCoord(final_comp_table['X_IMAGE'], final_comp_table['Y_IMAGE'],
                         np.zeros(len(final_comp_table['X_IMAGE'])),

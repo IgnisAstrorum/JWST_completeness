@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/nvme/scratch/software/anaconda3/envs/jwst/bin/python
 # -*- coding: utf-8 -*-
 """
 Created on Wed Jun 29 10:36:17 2022
@@ -30,7 +30,7 @@ for file in detection_files:
     seg_file = out_dir + seg_fileroot + "{}.fits".format(cat_no)
     check_string = "-CHECKIMAGE_NAME "+seg_file+" -CHECKIMAGE_TYPE SEGMENTATION"
     in_file = file + "'[1]'"
-    weights = file + "'[4]'"
+    weights = file + "'[2]'"
     cat_name = out_dir+cat_fileroot+"{}.fits".format(cat_no)
     call1 = "sex {} -c {} -WEIGHT_IMAGE {}".format(in_file, config, weights)
     call2 = " -CATALOG_NAME {} -MAG_ZEROPOINT {} ".format(cat_name, zeropoint)
